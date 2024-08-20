@@ -6,7 +6,7 @@ LLVM := 1
 CFLAGS_REMOVE_my_c_function.o := -fsanitize=bounds-strict -fconserve-stack -fsanitize
 
 obj-m := rust_c_kernel_module.o
-rust_c_kernel_module-objs := src/lib.o my_c_function.o
+rust_c_kernel_module-objs := src/lib.o my_c_function.o module_license.o
 
 else
 KDIR := /lib/modules/$(shell uname -r)/build
